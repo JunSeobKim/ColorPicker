@@ -18,6 +18,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pP-Vi-tAE">
                                 <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ogA-qY-kp5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xbJ-zH-eQf"/>
+                                </connections>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WiP-qc-tRf">
                                 <rect key="frame" x="16" y="462" width="382" height="168"/>
@@ -25,17 +29,29 @@
                                     <slider opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Imy-0j-zew">
                                         <rect key="frame" x="-2" y="0.0" width="386" height="31"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tJ9-gi-EM9"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="4fi-Bo-iK8">
                                         <rect key="frame" x="-2" y="46" width="386" height="31"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fzl-gO-yZy"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="ikt-Dj-2ME">
                                         <rect key="frame" x="-2" y="92" width="386" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bf5-uB-tgD"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-VW-LiL">
                                         <rect key="frame" x="-2" y="138" width="386" height="31"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9KI-7l-7Qh"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -59,10 +75,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0hO-rx-tiN" secondAttribute="trailing" constant="16" id="hjT-E9-G9V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="0hO-rx-tiN" id="n7o-rq-hxK"/>
+                        <outlet property="pickerView" destination="9pP-Vi-tAE" id="Kxf-WL-d49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="108"/>
+            <point key="canvasLocation" x="159" y="85"/>
         </scene>
     </scenes>
     <resources>
