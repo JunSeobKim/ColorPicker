@@ -43,8 +43,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     
     // MARK: Privates
-    private let rgbStep: Float = 255.0
-    private let numberOfRGBStep: Int = 256
+    private let rgbStep: Float = 52.0
+    private let numberOfRGBStep: Int = 52
     private let numberOfAlphaStep: Int = 11
     
     
@@ -127,7 +127,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             return String(format: "%1.1lf", Double(row) * 0.1)
         }
         else {
-            return "\(row)"
+            return "\(row * 5)"
         }
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
